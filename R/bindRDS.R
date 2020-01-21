@@ -1,6 +1,6 @@
 
 setwd("./scenario/RDS")
-library(tidyverse)
+
 querynames = substr(list.files(pattern = "*.rds"), 1, nchar(list.files(pattern = "*.rds"))-4)
 querynames1 <- unique(substr(querynames,1,nchar(querynames)-8))
 

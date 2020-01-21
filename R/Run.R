@@ -3,6 +3,7 @@ rm(list=ls())
 library(dplyr)
 library(tidyr)
 library(stringr)
+library(tidyverse)
 
 library(cowplot)
 library(extrafont)
@@ -27,8 +28,6 @@ querynames = substr(list.files(pattern = "*.rds"), 1, nchar(list.files(pattern =
 for (x in querynames){assign(paste0(x),readRDS(paste0(x,".rds")))}
 setwd(dirname(dirname(dirname(getwd()))))
 #######
-
-
 
 
 

@@ -1,6 +1,7 @@
 
 setwd(n)
 Para =s
+rds = "../RDS/"
 #################################################  
   quary = "Detailedland"
   Filenames = list.files(pattern = paste0(quary, "*"))
