@@ -54,7 +54,10 @@ C_2 <- c(
   "PalmFruit",
   "Rice",
   "SugarCrop",
-  "Wheat")
+  "Wheat",
+  "biomassGrass",
+  "biomassTree",
+  "RootTuber")
 #3 corps; 14 corps in total
 C_3 <- c(
   "biomass_grass",

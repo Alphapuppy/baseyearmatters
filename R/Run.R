@@ -4,22 +4,24 @@ library(dplyr)
 library(tidyr)
 library(stringr)
 library(tidyverse)
+library(extrafont)
 
 library(cowplot)
-library(extrafont)
+
 library(egg)
 library(ggplot2)
+
 
 
 source("./R/info.R")
 ####### Process data to RDS
 scen <- list.files(path = "./scenario", all.files = FALSE, recursive = FALSE)
-scenpath <- list.dirs(path = "./scenario", full.names = TRUE, recursive = F)
+#scenpath <- list.dirs(path = "./scenario", full.names = TRUE, recursive = F)
 dir.create("./scenario/RDS", showWarnings = FALSE)
-for (n in setdiff(scenpath, "./scenario/RDS")) {
-  for (s in setdiff(scen, "RDS")) {
+
+for (s in setdiff(scen, "RDS")) {
+  n = paste0("./scenario/",s)
     source("./R/csv_to_rds.R")
-  }
 } 
 source("./R/bindRDS.R")
 ####### Read RDS
