@@ -6,8 +6,8 @@ library(stringr)
 library(tidyverse)
 library(extrafont)
 
-library(cowplot)
 
+library(cowplot)
 library(egg)
 library(ggplot2)
 
@@ -24,6 +24,8 @@ for (s in setdiff(scen, "RDS")) {
     source("./R/csv_to_rds.R")
 } 
 source("./R/bindRDS.R")
+
+
 ####### Read RDS
 setwd("./scenario/RDS/RDS_binded") 
 querynames = substr(list.files(pattern = "*.rds"), 1, nchar(list.files(pattern = "*.rds"))-4)
@@ -31,6 +33,8 @@ for (x in querynames){assign(paste0(x),readRDS(paste0(x,".rds")))}
 setwd(dirname(dirname(dirname(getwd()))))
 #######
 
+
+source("./R/rds_to_visualdata.R")
 
 
 

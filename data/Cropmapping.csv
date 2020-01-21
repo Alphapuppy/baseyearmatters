@@ -20,10 +20,10 @@ Wheat,Cropland
 biomassGrass,Biomass
 biomassTree,Biomass
 RootTuber,Cropland
-ProtectedGrassland,fixed
-ProtectedShrubland,fixed
-ProtectedUnmanagedForest,fixed
-ProtectedUnmanagedPasture,fixed
-RockIceDesert,fixed
-UrbanLan,fixed
-Tundra,fixed
+ProtectedGrassland,Fixed
+ProtectedShrubland,Fixed
+ProtectedUnmanagedForest,Fixed
+ProtectedUnmanagedPasture,Fixed
+RockIceDesert,Fixed
+UrbanLand,Fixed
+Tundra,Fixed

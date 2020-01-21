@@ -2,6 +2,8 @@
 setwd(n)
 Para =s
 rds = "../RDS/"
+Land_fixed = c()
+nonyear = c()
 #################################################  
   quary = "Detailedland"
   Filenames = list.files(pattern = paste0(quary, "*"))
@@ -196,7 +198,7 @@ rds = "../RDS/"
     within(rm("X")) %>% mutate(year = substr(year,2,5)) %>% rename(unit = Units) %>%
     mutate(result = quary, scenario = substr(scenario, nchar(quary)+2, nchar(scenario)-4),para= Para) %>%
     filter(year %notin% nonyear) %>%
-    dplyr::select(scenario, region, year, unit, value)
+    dplyr::select(scenario,result,para,region, year, unit, value)
   
   saveRDS(POP1, file = paste0(rds,quary,Para,".rds"))
   rm(POP, POP1)
